@@ -79,12 +79,64 @@ body{
     margin-right: 29px;
 }
 
+.logo:hover h3{
+    animation: fromRight 500ms linear;
+}
+
+@keyframes fromRight{
+    0%{
+        transform: translateX(0%);
+    }
+    50%{
+        transform: translateX(200%);
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+
+.logo:hover{
+    border-radius: 2px;
+    color: black;
+    background-color: #ccc;
+   
+}
+
 .logo .gear{
     display: block;
     float: left;
     font-size: 26px;
     margin-top: 4px;
     margin-left: 26px;
+    animation-name: rotate-gear;
+    animation-duration: 2s;         
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;  /*misma velocidad*/
+}
+
+.logo:hover .gear{
+    animation: fromBellow 500ms linear;
+}
+
+@keyframes rotate-gear{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes fromBellow{
+    0%{
+        transform: translateY(0%);
+    }
+    50%{
+        transform: translateY(200%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
 }
 
 .menu{
@@ -121,6 +173,20 @@ body{
     background-image: url(../img/bakbaner.png);
     background-position: -200px -200px;
     margin: 20px auto;
+    animation: backBanner 10s linear infinite;
+    overflow: hidden;
+}
+
+@keyframes backBanner{
+    0%{
+        background-position: 0 0 ;
+    }
+    100%{
+        background-position: -200px -200px;
+    }
+    0%{
+        background-position: 0 0;
+    }
 }
 
 .banner h1{
@@ -133,8 +199,31 @@ body{
     margin: 16px auto;
     font-weight: normal;
     text-shadow: 2px 2px 1px black;
+    animation: showText 10s linear;
 }
 
+@keyframes showText{
+    0%{
+         transform: translateX(-600%) scale(5,5);
+         opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        text-shadow: none;
+        color: transparent;
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 1px black;
+        color: white;
+        opacity: 1;
+    }
+}
 /* Tarjetas */
 
 .card{
@@ -147,8 +236,12 @@ body{
     box-shadow: 0 0 2px #dddddd;
     float: left;
     cursor: pointer;
+    transition: all 300ms;
 }
 
+.card:hover{
+    background-color: black;
+}
 .card .icon{
     display: block;
     width: 100%;
@@ -156,6 +249,22 @@ body{
     font-size: 50px;
     line-height: 110px;
     margin: 0px 70px;
+    transition: all 300ms;
+}
+
+.card:hover .icon{
+    font-size: 50px;
+    color: #37bcf9;
+    animation: showIcon 300ms linear;
+}
+
+@keyframes showIcon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 
 .card .category{
@@ -166,6 +275,23 @@ body{
     font-weight: bold;
     text-align: center;
     color: #00538c;
+    transition: all 300ms;
+}
+
+.card:hover .category{
+    color: white;
+    animation: showCategory 400ms linear;
+}
+
+@keyframes showCategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: white;
+    }
 }
 
 .card .description{
@@ -174,6 +300,23 @@ body{
     text-align: center;
     color:#0368ac;
     font-family: "TrebuchetMS";
+    transition: all 300ms;
+}
+
+.card:hover .description{
+    color: white;
+    animation: showDescription 300ms linear;
+}
+
+@keyframes showDescription{
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+    to{
+        transform: translateX(0%);
+        color: white;
+    }
 }
 
 /* Barra lateral */
@@ -312,6 +455,7 @@ aside h3{
 
 .social{
     height: 190px;
+    width: 180px;
 }
 
 .login a{
@@ -332,6 +476,29 @@ aside h3{
     font-size: 30px;
 }
 
+.social .overlay{
+    display: block;
+    height: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-shadow: 0 0 1px #ccc;
+    border: 3px solid white;
+    box-shadow: 0 0 4px #ccc;
+    background-color: #f4f7fe;
+    position: absolute;
+    padding: 5px;
+    margin: -52px 0  0 70px;
+    transform: translateX(-80%);
+    opacity: 0;
+    transition: all 400ms;
+    border-radius: 2px;
+}
+
+.social div:hover .overlay{
+    transform: translateX(0%);
+    opacity: 1;
+}
 /* articulos */
 
 .articles{
@@ -457,7 +624,7 @@ aside h3{
 .footer ul{
     text-align: left;
     margin: 20px;
-    font-size: 25px;
+    font-size: 23px;
 }
 
 .footer ul li{
@@ -472,6 +639,11 @@ aside h3{
     height: 40px;
 }
 
+.footer ul li:hover a{
+    padding-left: 40px;
+    font-size: 26px;
+    color: white;
+}
 .footer iframe{
     width: 100%;
     height: 300px;
@@ -487,5 +659,5 @@ aside h3{
 
 .footer .browser img{
     width: 45px;
-    
+
 }
