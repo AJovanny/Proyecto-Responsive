@@ -1,0 +1,44 @@
+@media(max-width:1250px){
+    .wrap{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .card{
+        width: 17%;
+        margin: 1.5%;
+    }
+
+    .card .description{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .articles{
+        width:65%;
+    }
+
+    .footer .wrap >div{
+        width: 24%;
+        margin: 4.6%;
+    }
+
+    .footer .browser img{
+        width: 14%;
+    }
+
+    .footer .wrap h5{
+        font-size: 30px;
+    }
+
+    .banner h1{
+        font-size: 35px;
+        text-align: center;
+        margin: 33px auto;
+    }
+}
+
+@media(max-width:1080px){
+
+}
