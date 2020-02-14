@@ -41,4 +41,138 @@
 
 @media(max-width:1080px){
 
+    .card .category{
+        font-size: 17px;
+    }
+
+    .card .description{
+        font-size: 14px;
+    }
+
+    .articles{
+        width: 60%;
+    }
+
+    .footer .wrap h5{
+        font-size: 25px;
+    }
+
+    .card .icon{
+      margin:0 33%;
+    }
+
+    .footer iframe{
+        height: 75%;
+    }
+}
+
+@media(max-width:945px){
+
+    .banner h1{
+        font-size: 28px;
+    }
+    .lateral input[type="submit"],
+    .lateral input[type="button"],
+    .lateral input[type="reset"]{
+        width: 30%;
+        margin-left: 13%;
+    }
+   
+    .lateral input[type="text"]{
+        width: 50%;
+    }
+    .articles{
+        width: 55%;
+    }
+
+    .search{
+        width: 80%;
+    }
+    .lateral{
+        width: 30%;
+    }
+}
+
+@media(max-width:768px){
+    .footer .wrap h5{
+        font-size: 20px;
+    }
+}
+
+@media(max-width:720px){
+
+
+    aside h3{
+        font-size: 25px;
+    }
+    .footer .wrap h5{
+        font-size: 18px;
+    }
+
+}
+
+@media(max-width:685px){
+      .header{
+        height: 120px;
+      }
+
+      .logo{
+          margin: 8px 220px;
+      }
+      .menu{
+        float: left;
+      }
+
+      .menu ul{
+        margin: 0 70px;
+      }
+
+      .articles h2{
+        font-size: 32px;
+      }
+
+      .articles article h4 a{
+        font-size: 15px;
+      }
+
+      .articles .data{
+          font-size: 9px;
+      }
+}
+
+
+@media(max-width:655px){
+      .card{
+          height: 183px;
+      }
+
+      .card .icon{
+          margin: 0 13%;
+      }
+
+
+      .lateral{
+          float: none;
+          width: 100%;
+      }
+
+      .lateral input[type="text"]{
+        width: 50%;
+    }
+
+      .articles{
+          float: none;
+          width: 100%;
+      }
+
+      .footer{
+          height: 1300px;
+      }
+      .footer .wrap div{
+          width: 100%;
+      }
+
+      .footer .wrap h5{
+          font-size: 40px;
+      }
 }
